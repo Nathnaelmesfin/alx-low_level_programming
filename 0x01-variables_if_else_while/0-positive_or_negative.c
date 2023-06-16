@@ -1,8 +1,3 @@
-/*
- * File: 0-positive_or_negative.c
- * Auth: Nathnael Mesfin 
- */
-
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
