@@ -1,4 +1,4 @@
-i#include "main.h"
+#include "main.h"
 
 /**
  * prime2 - Makes possible to evaluate from 1 to n
