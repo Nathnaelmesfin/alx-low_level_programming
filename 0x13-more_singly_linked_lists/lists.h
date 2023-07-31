@@ -9,8 +9,8 @@
  * @n: integer
  * @next: points to the next node
  *
- * Description: singly linked list node structure
- * for ALX project
+ * Descri: singly linked list node structure
+ * author: Nathnael Mesfin
  */
 typedef struct listint_s
 {
