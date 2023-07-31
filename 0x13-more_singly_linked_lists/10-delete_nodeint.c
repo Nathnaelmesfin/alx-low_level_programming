@@ -4,8 +4,8 @@
  * delete_nodeint_at_index - deletes the node at a given index
  * @head: pointer to the head of a list
  * @index: index of the node to be  deleted
- * Return: 1 (success) -1 (failed)
- *        
+ * Return: 1 (success)
+ *        -1 (failed)
  */
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
