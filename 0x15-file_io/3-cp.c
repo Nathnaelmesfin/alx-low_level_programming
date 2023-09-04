@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 /**
+ * error_file - checks if files can be opened.
  * @file_from: file_from.
  * @file_to: file_to.
  * @argv: arguments vector.
@@ -22,7 +23,7 @@ void error_file(int file_from, int file_to, char *argv[])
 }
 
 /**
- * main - check the code for students.
+ * main - check the code for Holberton School students.
  * @argc: number of arguments.
  * @argv: arguments vector.
  * Return: Always 0.
@@ -30,7 +31,7 @@ void error_file(int file_from, int file_to, char *argv[])
 int main(int argc, char *argv[])
 {
 	int file_from, file_to, err_close;
-	ssize_t nochars, b;
+	ssize_t nchars, nwr;
 	char buf[1024];
 
 	if (argc != 3)
@@ -43,14 +44,14 @@ int main(int argc, char *argv[])
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	error_file(file_from, file_to, argv);
 
-	nochars = 1024;
-	while (nochars == 1024)
+	nchars = 1024;
+	while (nchars == 1024)
 	{
-		nochars = read(file_from, buf, 1024);
-		if (nochars == -1)
+		nchars = read(file_from, buf, 1024);
+		if (nchars == -1)
 			error_file(-1, 0, argv);
-		b = write(file_to, buf, nochars);
-		if (b == -1)
+		nwr = write(file_to, buf, nchars);
+		if (nwr == -1)
 			error_file(0, -1, argv);
 	}
 
@@ -69,4 +70,3 @@ int main(int argc, char *argv[])
 	}
 	return (0);
 }
-
